@@ -37,8 +37,12 @@ Add `--json` to any command for machine-readable output. Use `--refresh` to forc
 
 ### Searching documents
 
+`reader-search-documents` uses Readwise's hosted hybrid search, not a local or
+vector-only index. This distinction follows the live tool schema and the
+[official MCP contract](https://docs.readwise.io/tools/mcp), verified 2026-09-14.
+
 ```bash
-# Semantic search across all saved documents
+# Hybrid search across all saved documents
 readwise reader-search-documents --query "spaced repetition"
 
 # Search only articles saved for later
